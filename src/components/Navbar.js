@@ -26,8 +26,8 @@ export default function Navbar() {
         <h1>Unique Aerial Vision</h1>
       </div>
       <div className="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
+        <a href="#hero">Home</a>
+        <a href="#aboutus">About Us</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </div>
