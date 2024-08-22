@@ -16,8 +16,8 @@ export default function Contact() {
         <a href="#">
           <img
             src="/Assets/Instagram.png"
-            alt="instagram"
-            className="instagram"
+            alt="Instagram"
+            className="Instagram"
           ></img>
         </a>
       </div>
