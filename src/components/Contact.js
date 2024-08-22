@@ -6,16 +6,20 @@ export default function Contact() {
       </h1>
       <button className="whatsapp-button">Chat With Us</button>
       <div className="social-media">
-        <img
-          src="/Assets/facebook.png"
-          alt="facebook"
-          className="facebook"
-        ></img>
-        <img
-          src="/Assets/instagram.png"
-          alt="instagram"
-          className="instagram"
-        ></img>
+        <a href="#">
+          <img
+            src="/Assets/facebook.png"
+            alt="facebook"
+            className="facebook"
+          ></img>
+        </a>
+        <a href="#">
+          <img
+            src="/Assets/Instagram.png"
+            alt="instagram"
+            className="instagram"
+          ></img>
+        </a>
       </div>
     </div>
   );
