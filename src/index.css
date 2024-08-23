@@ -95,6 +95,7 @@ body {
 @media (max-width: 768px) {
   .hamburger img {
     display: block;
+    margin-right: 10px;
     visibility: visible; /* Show the image on smaller screens */
     position: relative; /* Reset position to be inline */
   }
