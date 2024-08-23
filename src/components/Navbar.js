@@ -31,6 +31,12 @@ export default function Navbar() {
         <img src={logo} alt="Unique Aerial Vision Logo" className="logo" />
         <h1>Unique Aerial Vision</h1>
       </div>
+      <div className="hamburger" onClick={toggleMenu}>
+        <img src="/Assets/hamburger.png" alt="hamburger"></img>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
         <a href="#hero" onClick={() => setMenuOpen(false)}>
           Home
@@ -44,11 +50,6 @@ export default function Navbar() {
         <a href="#contact" onClick={() => setMenuOpen(false)}>
           Contact
         </a>
-      </div>
-      <div className="hamburger" onClick={toggleMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
     </nav>
   );
