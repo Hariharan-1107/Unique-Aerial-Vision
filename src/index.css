@@ -1,3 +1,4 @@
+/* Updated CSS for Navbar with Hamburger Menu */
 html {
   scroll-behavior: smooth;
 }
@@ -62,6 +63,11 @@ body {
   margin: 0;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links a {
   color: black;
   text-decoration: none;
@@ -71,6 +77,49 @@ body {
 
 .nav-links a:hover {
   text-decoration: underline;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 9;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+
+  .navbar h1 {
+    font-size: 20px;
+  }
 }
 
 .hero-content {
@@ -101,6 +150,7 @@ body {
   padding: 50px;
   border-bottom: 1px solid #36c2ce;
 }
+
 .services-contents {
   display: flex;
   flex-direction: column; /* Stack heading and cards vertically */
@@ -155,6 +205,7 @@ body {
   padding: 50px;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .contact h1 {
   margin-bottom: 40px;
   font-size: 30px;
@@ -181,6 +232,7 @@ body {
   width: 30px;
   height: 30px;
 }
+
 .social-media {
   display: flex;
   justify-content: center;
