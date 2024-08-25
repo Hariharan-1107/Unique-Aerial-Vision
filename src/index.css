@@ -9,6 +9,8 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Hero Section Styles */
+
 .hero-container {
   position: relative;
   height: 100vh; /* Full screen height */
@@ -21,6 +23,7 @@ body {
   object-fit: cover; /* Ensures images cover the entire area */
 }
 
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -149,6 +152,7 @@ body {
   margin-top: 20px;
 }
 
+/* About Section Styles */
 .about-content {
   display: flex;
   justify-content: center;
@@ -157,6 +161,8 @@ body {
   padding: 50px;
   border-bottom: 1px solid #36c2ce;
 }
+
+/*Services Styles*/
 
 .services-contents {
   display: flex;
@@ -204,18 +210,46 @@ body {
   }
 }
 
+/*Work Styles*/
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Space between video tiles */
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional: background color for the container */
+}
+
+.video-tile {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  border-radius: 6%;
+}
+
+.video-tile iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; /* Remove border around iframe */
+}
+
+/*Contact Styles*/
+
 .contact {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
+  padding: 10px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .contact h1 {
   margin-bottom: 40px;
-  font-size: 30px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
 }

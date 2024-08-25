@@ -44,6 +44,9 @@ export default function Navbar() {
         <a href="#aboutus" onClick={() => setMenuOpen(false)}>
           About Us
         </a>
+        <a href="#work" onClick={() => setMenuOpen(false)}>
+          Our Work
+        </a>
         <a href="#services" onClick={() => setMenuOpen(false)}>
           Services
         </a>

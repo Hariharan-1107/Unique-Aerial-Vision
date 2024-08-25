@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import Aboutus from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
+import Work from "./Work";
 function App() {
   return (
     <div>
@@ -11,6 +12,10 @@ function App() {
 
       <div id="aboutus">
         <Aboutus />
+      </div>
+
+      <div id="work">
+        <Work />
       </div>
 
       <div id="services">

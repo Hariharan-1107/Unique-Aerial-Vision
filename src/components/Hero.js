@@ -11,7 +11,7 @@ export default function Hero() {
         autoPlay={true}
         infiniteLoop={true}
         showStatus={false}
-        showArrows={false}
+        showArrows={true}
         className="hero-carousel"
       >
         <div>
