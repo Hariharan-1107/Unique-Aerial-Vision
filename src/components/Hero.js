@@ -15,13 +15,13 @@ export default function Hero() {
         className="hero-carousel"
       >
         <div>
-          <img src="/Assets/image1.jpg" alt="Aerial1" />
+          <img src="/Assets/image1.jpg" alt="Aerial1" loading="lazy" />
         </div>
         <div>
-          <img src="Assets/image2.jpg" alt="Aerial2" />
+          <img src="Assets/image2.jpg" alt="Aerial2" loading="lazy" />
         </div>
         <div>
-          <img src="Assets/image3.jpg" alt="Aerial3" />
+          <img src="Assets/image3.jpg" alt="Aerial3" loading="lazy" />
         </div>
       </Carousel>
       <Navbar />
