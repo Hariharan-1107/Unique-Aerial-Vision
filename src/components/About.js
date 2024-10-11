@@ -3,15 +3,17 @@ export default function Aboutus() {
     <div className="about-content">
       <h1>Unique Aerial Vision</h1>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        Unique Aerial Vision is a premier provider of advanced drone services,
+        offering unparalleled expertise in aerial cinematography, event
+        coverage, real estate imaging, and industrial surveying. With over 7
+        years of professional experience, we deliver cutting-edge solutions that
+        blend creativity with technical precision, ensuring high-quality visuals
+        for clients across diverse industries. Our team of certified drone
+        pilots, equipped with state-of-the-art technology, excels in capturing
+        stunning aerial perspectives that enhance storytelling, optimize
+        operations, and provide valuable insights. At Unique Aerial Vision, we
+        elevate your vision to new heights, delivering results that are
+        innovative, impactful, and distinctly professional
       </p>
     </div>
   );

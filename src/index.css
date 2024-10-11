@@ -112,7 +112,7 @@ body {
     right: 20px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links a {
@@ -124,6 +124,13 @@ body {
 
   .nav-links.active {
     display: flex;
+  }
+  .nav-links.active.scrolled {
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .nav-links.active.scrolled a {
+    color: black;
   }
 }
 

@@ -12,6 +12,11 @@ export default function Navbar() {
       } else {
         setScrolled(false);
       }
+
+      // Close the menu when scrolling
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,7 +24,7 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [menuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -31,10 +36,17 @@ export default function Navbar() {
         <img src={logo} alt="Unique Aerial Vision Logo" className="logo" />
         <h1>Unique Aerial Vision</h1>
       </div>
-      <div className="hamburger" onClick={toggleMenu}>
+      <div
+        className={`hamburger ${scrolled ? "scrolled" : ""}`}
+        onClick={toggleMenu}
+      >
         <img src="/Assets/hamburger.png" alt="hamburger"></img>
       </div>
-      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+      <div
+        className={`nav-links ${menuOpen ? "active" : ""} ${
+          scrolled ? "scrolled" : ""
+        }`}
+      >
         <a href="#hero" onClick={() => setMenuOpen(false)}>
           Home
         </a>
