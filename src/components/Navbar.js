@@ -33,9 +33,6 @@ export default function Navbar() {
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         <img src="/Assets/hamburger.png" alt="hamburger"></img>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
         <a href="#hero" onClick={() => setMenuOpen(false)}>

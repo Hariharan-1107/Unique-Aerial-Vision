@@ -107,17 +107,16 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
     top: 60px;
-    right: 0;
-    background-color: white;
+    right: 20px;
     width: 100%;
     text-align: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 0; /* Ensure there is no margin */
-    padding: 0; /* Ensure there is no padding */
   }
 
   .nav-links a {
+    color: white;
     padding: 15px 0;
     border-bottom: 1px solid #ddd;
     margin: 0; /* Ensure there is no margin */
