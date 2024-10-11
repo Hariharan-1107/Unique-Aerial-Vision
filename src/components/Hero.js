@@ -13,15 +13,16 @@ export default function Hero() {
         showStatus={false}
         showArrows={true}
         className="hero-carousel"
+        interval={3000}
       >
         <div>
-          <img src="/Assets/image1.jpg" alt="Aerial1" loading="lazy" />
+          <img src="/Assets/image1.webp" alt="Aerial1" loading="lazy" />
         </div>
         <div>
-          <img src="Assets/image2.jpg" alt="Aerial2" loading="lazy" />
+          <img src="Assets/image2.webp" alt="Aerial2" loading="lazy" />
         </div>
         <div>
-          <img src="Assets/image3.jpg" alt="Aerial3" loading="lazy" />
+          <img src="Assets/image3.webp" alt="Aerial3" loading="lazy" />
         </div>
       </Carousel>
       <Navbar />
