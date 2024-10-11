@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 export default function Hero() {
   return (
     <div className="hero-container">
-      <div>
+      <div className="hero-video-wrapper">
         <video src="Assets/video.mp4" autoPlay loop muted />
       </div>
       <Navbar />

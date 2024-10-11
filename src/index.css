@@ -98,7 +98,7 @@ body {
 @media (max-width: 768px) {
   .hamburger img {
     display: block;
-    margin-right: 10px;
+    margin-right: 20px;
     visibility: visible; /* Show the image on smaller screens */
     position: relative; /* Reset position to be inline */
   }
@@ -282,8 +282,77 @@ body {
   margin-top: 20px;
 }
 
-.hero-img {
+.hero-container {
+  position: relative;
+  height: 100vh; /* Full screen height */
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Video wrapper ensures the video is always full-screen */
+.hero-video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the full area */
+}
+
+/* Center the content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px; /* Add some padding for smaller screens */
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 24px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .hero-video-wrapper {
+    height: auto;
+    width: 100%;
+  }
+
+  .hero-video {
+    object-fit: cover;
+    height: 100%; /* Ensure video fills height on mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
 }
