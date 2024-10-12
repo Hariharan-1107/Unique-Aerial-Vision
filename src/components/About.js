@@ -3,16 +3,16 @@ import logo from "./logo.png";
 export default function Aboutus() {
   return (
     <div>
-      <h1 className="heading">About Us</h1>
+      <h1 className="heading parisienne-regular">About Us</h1>
       <div className="about-container">
         <div className="about-text">
-          <h1 className="sarabun-extrabold-italic">
+          <h1 className="poppins-semibold-italic">
             <span>
               <img src={logo} alt="logo" className="aboutlogo" />
             </span>
             Unique Aerial Vision
           </h1>
-          <p className="poppins-semibold-italic">
+          <p className="nunito-sans-regular">
             Unique Aerial Vision is a premier provider of advanced drone
             services, offering unparalleled expertise in aerial cinematography,
             event coverage, real estate imaging, and industrial surveying. With

@@ -179,8 +179,7 @@ body {
 
 .services-contents h1 {
   margin-bottom: 40px;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -361,4 +360,9 @@ body {
   .hero-content p {
     font-size: 16px;
   }
+}
+
+.worksection {
+  text-align: center;
+  font-size: 2rem;
 }

@@ -1,7 +1,7 @@
 .heading {
   text-align: center;
   margin-bottom: 40px; /* Adjusted spacing for a cleaner look */
-  font-size: 2.5em; /* Increased heading size */
+  font-size: 2rem; /* Increased heading size */
 }
 
 .aboutlogo {
@@ -13,7 +13,7 @@
 
 .about-container {
   display: flex;
-  align-items: flex-start; /* Align content to the top */
+  align-items: center; /* Align content to the top */
   justify-content: space-between;
   gap: 20px; /* Adds space between text and image */
   padding: 0 20px; /* Adds padding for better structure */
@@ -38,6 +38,10 @@
   margin-top: 0;
   font-size: 16px; /* Adjust font size for better readability */
   line-height: 1.6; /* Increase line spacing for readability */
+  height: auto; /* Allows height to adjust based on content */
+  overflow: hidden; /* Hide overflow text if it exceeds max height */
+  text-align: justify; /* Justify text for a cleaner look */
+  padding: 0 10px; /* Add horizontal padding */
 }
 
 .about-image img {
@@ -49,15 +53,21 @@
 
 @media screen and (max-width: 768px) {
   .about-container {
-    flex-direction: column;
+    flex-direction: column; /* Maintain column layout on mobile */
     align-items: center;
   }
 
   .about-image {
-    order: 1; /* Image appears before the paragraph on mobile */
-    margin-top: 20px; /* Optional spacing above the image */
+    margin-top: 20px; /* Space above the image on mobile */
   }
 
+  .about-text h1 {
+    font-size: 2rem; /* Decrease heading size on mobile */
+  }
+  .about-text p {
+    font-size: 15px;
+    margin-left: 15px; /* Decrease font size on mobile */
+  }
   .about-text {
     order: 2; /* Text comes after image on mobile */
   }
@@ -71,6 +81,12 @@
 
 .nunito-sans-regular {
   font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
   font-weight: 400;
   font-style: normal;
 }

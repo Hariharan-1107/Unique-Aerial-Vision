@@ -24,7 +24,7 @@ export default function Services() {
   ];
   return (
     <div className="services-contents">
-      <h1>Our Services</h1>
+      <h1 className="parisienne-regular">Our Services</h1>
       <div className="cards-container">
         {services.map((service) => (
           <Cardbox
