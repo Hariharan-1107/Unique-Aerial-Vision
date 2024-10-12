@@ -49,8 +49,12 @@
 
 @media screen and (max-width: 768px) {
   .about-container {
-    flex-direction: column-reverse; /* Display the image before the text */
+    flex-direction: column; /* Stacks elements vertically */
     align-items: center;
+  }
+
+  .about-image {
+    margin: 20px 0; /* Space around the image */
   }
 
   .about-text {
@@ -58,7 +62,7 @@
   }
 
   .about-image img {
-    margin-bottom: 20px; /* Adds space below the image */
+    margin-top: 20px; /* Space above the image */
     max-width: 100%;
   }
 }

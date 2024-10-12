@@ -6,13 +6,13 @@ export default function Aboutus() {
       <h1 className="heading">About Us</h1>
       <div className="about-container">
         <div className="about-text">
-          <h1 className="poppins-semibold-italic">
+          <h1 className="sarabun-extrabold-italic">
             <span>
               <img src={logo} alt="logo" className="aboutlogo" />
             </span>
             Unique Aerial Vision
-          </h1>{" "}
-          <p className="nunito-sans-regular">
+          </h1>
+          <p className="poppins-semibold-italic">
             Unique Aerial Vision is a premier provider of advanced drone
             services, offering unparalleled expertise in aerial cinematography,
             event coverage, real estate imaging, and industrial surveying. With
@@ -31,7 +31,7 @@ export default function Aboutus() {
           <img src="Assets/Drone.jpg" alt="Drone capturing aerial view" />
         </div>
       </div>
-      <hr></hr>
+      <hr />
     </div>
   );
 }
