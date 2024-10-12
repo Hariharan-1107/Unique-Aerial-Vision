@@ -49,21 +49,17 @@
 
 @media screen and (max-width: 768px) {
   .about-container {
-    flex-direction: column; /* Stacks elements vertically */
+    flex-direction: column;
     align-items: center;
   }
 
   .about-image {
-    margin: 20px 0; /* Space around the image */
+    order: 1; /* Image appears before the paragraph on mobile */
+    margin-top: 20px; /* Optional spacing above the image */
   }
 
   .about-text {
-    padding-right: 0;
-  }
-
-  .about-image img {
-    margin-top: 20px; /* Space above the image */
-    max-width: 100%;
+    order: 2; /* Text comes after image on mobile */
   }
 }
 
