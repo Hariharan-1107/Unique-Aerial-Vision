@@ -13,13 +13,11 @@ function App() {
       <div id="aboutus">
         <Aboutus />
       </div>
-
-      <div id="work">
-        <Work />
-      </div>
-
       <div id="services">
         <Services />
+      </div>
+      <div id="work">
+        <Work />
       </div>
 
       <div id="contact">
