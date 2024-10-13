@@ -81,7 +81,7 @@ hr {
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: #433878;
 }
 
 /* Hamburger Menu Styles */
@@ -237,13 +237,13 @@ hr {
 /*Work Styles*/
 .work-container {
   position: relative;
-  left: 190px;
-  justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px; /* Space between video tiles */
   padding: 20px;
   background-color: #f9f9f9; /* Optional: background color for the container */
+  justify-content: center; /* Center the grid in the container */
+  align-items: center; /* Center items vertically */
 }
 
 .video-tile {
@@ -252,6 +252,9 @@ hr {
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   border-radius: 6%;
+  max-width: 100%; /* Ensure it doesn't exceed the container */
+  display: flex; /* Added to help with centering the iframe */
+  justify-content: center; /* Center the iframe within the tile */
 }
 
 .video-tile iframe {
@@ -261,6 +264,28 @@ hr {
   width: 100%;
   height: 100%;
   border: 0; /* Remove border around iframe */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .work-container {
+    grid-template-columns: 1fr; /* Stack video tiles vertically */
+    padding: 10px; /* Reduce padding on mobile */
+  }
+
+  .video-tile {
+    padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .work-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+
+  .video-tile {
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+  }
 }
 
 /*Contact Styles*/
@@ -273,19 +298,63 @@ hr {
   padding: 10px;
 }
 
-.whatsapp-button {
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 5px;
-  border-color: #25d366;
+/* From Uiverse.io by nikk7007 */
+.btn {
+  --color: #00a97f;
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 0.3px solid var(--color);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+  margin-bottom: 10px;
 }
 
-.whatsapp-button:hover {
-  background-color: #128c7e;
-  border-color: #128c7e;
+.btn::after,
+.btn::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
+}
+
+.btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+  color: var(--color2);
+}
+
+.btn:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
 }
 
 .social-media img {
@@ -298,7 +367,6 @@ hr {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-top: 20px;
 }
 
 .hero-container {
@@ -404,4 +472,128 @@ hr {
     0.8
   ); /* Optional: semi-transparent background */
   z-index: 10; /* Ensure it’s on top */
+}
+
+/* From Uiverse.io by david-mohseni */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  position: relative;
+  right: 20px;
+  bottom: 16px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  right: 1px;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #ff0000;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+.icon a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the original color */
+}
+
+.icon a:hover {
+  color: inherit; /* Ensure the hover effect doesn't change color */
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.nunito-sans-regular {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.orbitron-regular {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

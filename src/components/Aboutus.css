@@ -50,7 +50,15 @@
   height: auto;
   border-radius: 10px;
 }
-
+.contact-image img {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}
+.contact-image img :hover {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
 @media screen and (max-width: 768px) {
   .about-container {
     flex-direction: column; /* Maintain column layout on mobile */

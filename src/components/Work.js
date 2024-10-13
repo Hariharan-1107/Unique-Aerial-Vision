@@ -26,6 +26,13 @@ export default function Work() {
             allowfullscreen
           ></iframe>
         </div>
+        <div class="video-tile">
+          <iframe
+            src="https://www.youtube.com/embed/0pIyIMqwu0E?si=1kU-D-B3qOxabUYT"
+            title="YouTube video"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );

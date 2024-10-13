@@ -34,7 +34,9 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo-container">
         <img src={logo} alt="Unique Aerial Vision Logo" className="logo" />
-        <h1>Unique Aerial Vision</h1>
+        <a href="#hero">
+          <h1 className="orbitron-regular">Unique Aerial Vision</h1>
+        </a>
       </div>
       <div
         className={`hamburger ${scrolled ? "scrolled" : ""}`}

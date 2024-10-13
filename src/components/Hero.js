@@ -41,8 +41,12 @@ export default function Hero() {
       )}
       <Navbar />
       <div className="hero-content">
-        <h2>Capturing the World from Above</h2>
-        <p>Discover the beauty of aerial photography and videography.</p>
+        <h2 className="poppins-semibold-italic">
+          Capturing the World from Above
+        </h2>
+        <p className="nunito-sans-regular">
+          Discover the beauty of aerial photography and videography.
+        </p>
       </div>
     </div>
   );
