@@ -9,6 +9,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+
 /* Hero Section Styles */
 
 .hero-container {
@@ -228,13 +236,14 @@ body {
 
 /*Work Styles*/
 .work-container {
+  position: relative;
+  left: 190px;
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px; /* Space between video tiles */
   padding: 20px;
   background-color: #f9f9f9; /* Optional: background color for the container */
-  align-items: center;
-  justify-content: center;
 }
 
 .video-tile {
@@ -262,14 +271,6 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.contact h1 {
-  margin-bottom: 40px;
-  font-size: 10px;
-  font-weight: bold;
-  text-align: center;
 }
 
 .whatsapp-button {

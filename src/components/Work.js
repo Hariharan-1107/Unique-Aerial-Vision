@@ -1,6 +1,7 @@
 export default function Work() {
   return (
     <div>
+      <hr />
       <h2 className="worksection parisienne-regular">Our Work</h2>
       <div class="work-container">
         <div class="video-tile">
