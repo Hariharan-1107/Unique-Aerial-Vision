@@ -386,3 +386,17 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+
+.lottie-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Adjust according to your design */
+}
+
+.lottie-animation iframe {
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+}
