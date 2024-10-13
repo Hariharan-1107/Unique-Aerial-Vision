@@ -1,49 +1,44 @@
-import React, { useEffect, useRef, useState } from "react";
-import lottie from "lottie-web"; // Import Lottie
+import React from "react";
 import Navbar from "./Navbar";
 
 export default function Hero() {
-  const [isVideoLoaded, setVideoLoaded] = useState(false);
-  const loadingAnimationRef = useRef(null); // Create a ref for the animation container
+  const [isVideoLoaded, setVideoLoaded] = React.useState(false);
+  const [showAnimation, setShowAnimation] = React.useState(true);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowAnimation(false);
+    }, 1000); // Display animation for 1 second
+
+    return () => clearTimeout(timer);
+  }, []);
 
   function handleVideoLoad() {
     setVideoLoaded(true);
   }
 
-  useEffect(() => {
-    // Initialize Lottie animation
-    const animation = lottie.loadAnimation({
-      container: loadingAnimationRef.current, // Reference to the container
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "https://lottie.host/embed/678d52c4-cc69-4103-a0bf-03f3f1b6e5d8/q3pUdwIOTf.json", // Path to your Lottie JSON
-    });
-
-    return () => {
-      animation.destroy(); // Clean up the animation instance on unmount
-    };
-  }, []);
-
   return (
     <div className="hero-container">
-      <div className="hero-video-wrapper">
-        <video
-          src="Assets/video.mp4"
-          autoPlay
-          loop
-          muted
-          onLoadedData={handleVideoLoad}
-          style={{ display: isVideoLoaded ? "block" : "none" }}
-        />
-        {!isVideoLoaded && (
-          <div
-            className="loading"
-            ref={loadingAnimationRef}
-            style={{ width: "300px", height: "300px" }}
-          ></div>
-        )}
-      </div>
+      {showAnimation ? (
+        <div className="loading">
+          <iframe
+            src="https://lottie.host/embed/678d52c4-cc69-4103-a0bf-03f3f1b6e5d8/q3pUdwIOTf.json"
+            style={{ width: "300px", height: "300px", border: "none" }}
+            title="Drone Animation"
+          ></iframe>
+        </div>
+      ) : (
+        <div className="hero-video-wrapper">
+          <video
+            src="Assets/video.mp4"
+            autoPlay
+            loop
+            muted
+            onLoadedData={handleVideoLoad}
+            style={{ display: isVideoLoaded ? "block" : "none" }}
+          />
+        </div>
+      )}
       <Navbar />
       <div className="hero-content">
         <h2>Capturing the World from Above</h2>

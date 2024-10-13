@@ -387,16 +387,20 @@ body {
   border-radius: 10px;
 }
 
-.lottie-animation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white; /* Adjust according to your design */
-}
-
-.lottie-animation iframe {
-  width: 150px; /* Adjust as needed */
-  height: 150px; /* Adjust as needed */
+.loading {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed; /* Make it fixed to cover the whole screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: semi-transparent background */
+  z-index: 10; /* Ensure it’s on top */
 }
