@@ -28,7 +28,7 @@ export default function Aboutus() {
           </p>
         </div>
         <div className="about-image">
-          <img src="Assets/image.png" alt="Drone capturing aerial view" />
+          <img src="Assets/Drone.png" alt="Drone capturing aerial view" />
         </div>
       </div>
       <hr />

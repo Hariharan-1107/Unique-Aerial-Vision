@@ -1,13 +1,9 @@
-import { Card } from "react-bootstrap";
-export default function Cardbox({ title, description }) {
+export default function Cardbox({ title, description, url }) {
   return (
     <div className="service-card">
-      <Card>
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-        </Card.Body>
-      </Card>
+      <img src={url} alt="service" className="card-img" />
+      <h2 className="poppins-semibold-italic">{title}</h2>
+      <p className="nunito-sans-regular">{description}</p>
     </div>
   );
 }
