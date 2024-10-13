@@ -9,8 +9,7 @@ export default function Contact() {
           <div className="about-text contact">
             <h1 className="poppins-semibold-italic">Get in Touch</h1>
             <p>
-              <strong>Email:</strong> info@uniqueaerialvision.com |{" "}
-              <strong>Phone:</strong> +123-456-7890
+              <strong>Email:</strong> info@uniqueaerialvision.com
             </p>
             <p>
               <strong>Business Hours:</strong> Mon-Fri, 9 AM - 5 PM

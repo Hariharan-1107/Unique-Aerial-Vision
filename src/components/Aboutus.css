@@ -61,23 +61,39 @@
 }
 @media screen and (max-width: 768px) {
   .about-container {
-    flex-direction: column; /* Maintain column layout on mobile */
+    flex-direction: column; /* Stack content vertically */
     align-items: center;
+    padding: 0 10px; /* Add padding for smaller screens */
   }
 
   .about-image {
-    margin-top: 20px; /* Space above the image on mobile */
+    margin-top: 20px; /* Space above the image */
+    max-width: 100%; /* Ensure image scales within mobile width */
+  }
+
+  .about-text {
+    order: 2; /* Display text after image */
+    padding-right: 0; /* Remove right padding for mobile */
   }
 
   .about-text h1 {
-    font-size: 2rem; /* Decrease heading size on mobile */
+    font-size: 2rem; /* Smaller heading for mobile */
   }
+
   .about-text p {
-    font-size: 15px;
-    margin-left: 15px; /* Decrease font size on mobile */
+    font-size: 14px; /* Reduce font size */
+    padding: 0 5px; /* Less padding for mobile */
   }
-  .about-text {
-    order: 2; /* Text comes after image on mobile */
+
+  .aboutlogo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+    height: auto; /* Scale image properly */
   }
 }
 
