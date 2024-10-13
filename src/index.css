@@ -119,6 +119,7 @@ hr {
 
   .nav-links a {
     color: white;
+    text-decoration: none;
     padding: 15px 0;
     border-bottom: 1px solid #ddd;
     margin: 0; /* Ensure there is no margin */
